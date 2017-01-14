@@ -1,5 +1,20 @@
 <html>
+<script language="JavaScript">
+    function add()
+    {
+        var q1 = document.getElementById("q1");
+        var q2 = document.getElementById("q2");
+        var ans = eval(q1.value) + eval(q2.value);
+        var spanans = document.getElementById("ans");
+        spanans.innerHTML = ans;
+    }
+</script>
 <body>
-This is page2!!
+<p>This is page2!!</p>
+<p>
+    <input type="number" id="q1" />+<input type="number" id="q2" />
+    <input type="button" value="=" onclick="add()" /><span id="ans"></span>
+
+</p>
 </body>
 </html>
