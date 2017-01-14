@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     WebView wv;
@@ -13,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         wv = (WebView) findViewById(R.id.webView);
         wv.setWebChromeClient(new WebChromeClient());
+        wv.setWebViewClient(new WebViewClient());
         wv.getSettings().setJavaScriptEnabled(true);
-        wv.loadUrl("http://www.pcschool.com.tw");
+        wv.loadUrl("file:///android_asset/index.html");
     }
 }
